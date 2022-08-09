@@ -31,6 +31,10 @@ int _printf(const char *format, ...)
 				/* print the character from the va_arguments */
 					count += _putchar(va_arg(data, int));
 					break;
+				case 'd':
+				/* Refer to the print_decimal.c file*/
+					count += print_decimal(va_arg(data, int));
+					break;
 				default:
 					break;
 			}

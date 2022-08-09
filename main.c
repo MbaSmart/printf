@@ -11,6 +11,10 @@ int main(void)
 	int len;
 
 	len = _printf("Let's try to printf a simple sentence.\n");
+	_printf("Negative:[%d]\n", -762534);
+	_printf("Length:[%d]\n", len);
+	_printf("Positive:[%d]\n", 7654321);
+
 	return (0);
 }
 
