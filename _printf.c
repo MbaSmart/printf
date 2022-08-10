@@ -34,6 +34,10 @@ int _printf(const char *format, ...)
 				case 'd':
 					count += print_decimal(va_arg(data, int));
 					break;
+				case 'i':
+				/* Refer to the print_decimal.c file*/
+					count += print_decimal(va_arg(data, int));
+					break;
 				case 's':
 					count += _print_string(data);
 					break;
