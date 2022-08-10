@@ -29,15 +29,12 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				case 'c':
-				/* print the character from the va_arguments */
 					count += _putchar(va_arg(data, int));
 					break;
 				case 'd':
-				/* Refer to the print_decimal.c file*/
 					count += print_decimal(va_arg(data, int));
 					break;
 				case 's':
-				/* Refer to the _print_string.c file*/
 					count += _print_string(data);
 					break;
 				case '%':
