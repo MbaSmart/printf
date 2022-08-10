@@ -2,7 +2,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * _printf - Printf function
  * @format: format.
@@ -12,11 +11,9 @@ int _printf(const char *format, ...)
 {
 	int count = 0;
 	int i;
-
 	va_list data;
 
 	va_start(data, format);
-
 	for (i = 0; format[i] != '\0'; )
 	{
 		if (format[i] != '%')
@@ -35,7 +32,6 @@ int _printf(const char *format, ...)
 					count += print_decimal(va_arg(data, int));
 					break;
 				case 'i':
-				/* Refer to the print_decimal.c file*/
 					count += print_decimal(va_arg(data, int));
 					break;
 				case 's':
@@ -53,4 +49,3 @@ int _printf(const char *format, ...)
 	}
 	return (count);
 }
-
