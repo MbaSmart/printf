@@ -1,31 +1,18 @@
 #include "main.h"
-#include <stdarg.h>
-
 /**
 * _puts - prints a string.
 * @str: the string to passed in.
 *
 * Return: the number of character.
 */
-int _puts(char *str)
+int print_string(char *string)
 {
-	int i = 0;
+		int count = 0;
+		int i = 0;
 
-	while (str[i])
-	{
-		_putchar(str[i]);
-		i++;
-	}
-	return (i);
-}
-
-/**
-* _print_string - this calls the puts.
-* @args: the argument list
-*
-* Return: the number of character.
-*/
-int _print_string(va_list args)
-{
-	return (_puts(va_arg(args, char *)));
+		for (; string[i] != '\0'; i++)
+		{
+			count += _putchar(string[i]);
+		}
+		return (count);
 }

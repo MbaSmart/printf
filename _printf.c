@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 					count += print_decimal(va_arg(data, int));
 					break;
 				case 's':
-					count += _print_string(data);
+					count += print_string(va_arg(data, char *));
 					break;
 				case '%':
 					_putchar('%');
