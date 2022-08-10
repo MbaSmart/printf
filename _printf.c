@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _printf - Printf function
@@ -34,6 +35,14 @@ int _printf(const char *format, ...)
 				case 'd':
 				/* Refer to the print_decimal.c file*/
 					count += print_decimal(va_arg(data, int));
+					break;
+				case 's':
+				/* Refer to the _print_string.c file*/
+					count += _print_string(data);
+					break;
+				case '%':
+					_putchar('%');
+					count++;
 					break;
 				default:
 					break;
